@@ -27,6 +27,8 @@ public class UserJPanel extends javax.swing.JPanel {
         this.processContainer = processContainer;     
         this.admin = admin;
     }
+    
+    
 
 
     /**

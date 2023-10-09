@@ -23,12 +23,11 @@ public class LoginJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LoginJPanel
      */
-
-
-    LoginJPanel(JPanel processContainer, Person person) {
+    LoginJPanel(JPanel processContainer, Admin admin, Person person) {
         initComponents();
         this.processContainer = processContainer;
         this.person = person;
+        this.admin = admin;
     }
 
     /**
@@ -174,11 +173,10 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
 
             if (validUser) {
-//                UserJPanel panel = new UserJPanel(processContainer, admin);
-//                processContainer.add("UserJPanel", panel);
-//                CardLayout layout = (CardLayout) processContainer.getLayout();
-//                layout.next(processContainer);
-                  JOptionPane.showMessageDialog(null, "Valid User Test!!!!", "Warning", JOptionPane.WARNING_MESSAGE);
+                UserJPanel panel = new UserJPanel(processContainer, admin);
+                processContainer.add("UserJPanel", panel);
+                CardLayout layout = (CardLayout) processContainer.getLayout();
+                layout.next(processContainer);
             } else if (inactivateUser) {
                 JOptionPane.showMessageDialog(null, "Inactivated user, please ask admin to enable account.", "Warning", JOptionPane.WARNING_MESSAGE);
             } else {

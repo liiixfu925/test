@@ -6,6 +6,7 @@ package ui;
 
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 import model.Admin;
 import model.Person;
 
@@ -25,7 +26,20 @@ public class ViewJPanel extends javax.swing.JPanel {
        initComponents();
        this.processContainer = processContainer;
        this.person = person;
+       populatePersonDetails();
     }
+    
+    private void populatePersonDetails(){
+        if (person != null) {
+            txtUserID.setText(person.getUserId());
+            txtPassword.setText(person.getPassword());
+            txtName.setText(person.getName());
+            txtNUid.setText(person.getNuId());
+            txtStatus.setText(person.getStatus());
+        }  
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,6 +62,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblPassword = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
         lblNUid1 = new javax.swing.JLabel();
+        txtStatus = new javax.swing.JTextField();
 
         lblViewInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         lblViewInfo.setForeground(new java.awt.Color(255, 153, 153));
@@ -102,6 +117,12 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblNUid1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         lblNUid1.setText("NU id :");
 
+        txtStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStatusActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ViewPanelLayout = new javax.swing.GroupLayout(ViewPanel);
         ViewPanel.setLayout(ViewPanelLayout);
         ViewPanelLayout.setHorizontalGroup(
@@ -121,12 +142,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(lblUsername)
                             .addComponent(lblNUid1))
                         .addGap(41, 41, 41)
-                        .addGroup(ViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtUserID, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                             .addComponent(txtPassword)
                             .addComponent(txtName)
-                            .addComponent(txtNUid))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtNUid)
+                            .addComponent(txtStatus))))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         ViewPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtNUid, txtName, txtPassword, txtUserID});
@@ -156,9 +178,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(ViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtNUid, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblNUid1)))
-                .addGap(41, 41, 41)
-                .addComponent(lblNUid)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(ViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNUid)
+                    .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         ViewPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtNUid, txtPassword, txtUserID});
@@ -201,6 +225,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         layout.previous(processContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void txtStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStatusActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ViewPanel;
@@ -214,6 +242,11 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtNUid;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtStatus;
     private javax.swing.JTextField txtUserID;
     // End of variables declaration//GEN-END:variables
+
 }
+
+
+

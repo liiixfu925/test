@@ -122,11 +122,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnRegularUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegularUserActionPerformed
         // TODO add your handling code here:
-       LoginJPanel panel = new LoginJPanel(processContainer, person);
+       LoginJPanel panel = new LoginJPanel(processContainer, admin, person);
        processContainer.add("LoginJPanel", panel);
        CardLayout layout = (CardLayout) processContainer.getLayout();
        layout.next(processContainer);
-       
     }//GEN-LAST:event_btnRegularUserActionPerformed
 
     /**

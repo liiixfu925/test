@@ -52,15 +52,16 @@
                               <Component id="lblNUid1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txtUserID" linkSize="1" pref="198" max="32767" attributes="0"/>
                               <Component id="txtPassword" linkSize="1" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtName" linkSize="1" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtNUid" linkSize="1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtStatus" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="250" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,9 +96,12 @@
                           <Component id="lblNUid1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="lblNUid" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="110" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblNUid" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtStatus" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -188,6 +192,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="NU id :"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtStatus">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStatusActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
