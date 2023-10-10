@@ -26,8 +26,8 @@ public class LoginJPanel extends javax.swing.JPanel {
     LoginJPanel(JPanel processContainer, Admin admin, Person person) {
         initComponents();
         this.processContainer = processContainer;
-        this.person = person;
         this.admin = admin;
+        this.person = person;
     }
 
     /**
@@ -165,6 +165,7 @@ public class LoginJPanel extends javax.swing.JPanel {
                 if (person.getUserId().equals(userId) && person.getPassword().equals(password)) {
                     if (person.getStatus().equals("enable")) {
                         validUser = true;
+                        this.person = person;
                         break;
                     } else if (person.getStatus().equals("none")) {
                         inactivateUser = true;
@@ -173,7 +174,7 @@ public class LoginJPanel extends javax.swing.JPanel {
             }
 
             if (validUser) {
-                UserJPanel panel = new UserJPanel(processContainer, admin);
+                UserJPanel panel = new UserJPanel(processContainer, person);
                 processContainer.add("UserJPanel", panel);
                 CardLayout layout = (CardLayout) processContainer.getLayout();
                 layout.next(processContainer);

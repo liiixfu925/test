@@ -26,6 +26,16 @@ public class EditJPanel extends javax.swing.JPanel {
         initComponents();
         this.processContainer = processContainer;
         this.person = person;
+        
+        populatePersonDetails();
+    }
+    
+    private void populatePersonDetails(){
+        if (person != null) {
+            txtUserID.setText(person.getUserId());
+            txtPassword.setText(person.getPassword());
+            txtName.setText(person.getName());
+        }  
     }
 
     /**
@@ -87,6 +97,7 @@ public class EditJPanel extends javax.swing.JPanel {
         btnSave.setBackground(new java.awt.Color(204, 204, 255));
         btnSave.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnSave.setText("Save");
+        btnSave.setEnabled(false);
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);

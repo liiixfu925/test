@@ -25,9 +25,14 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         this.admin = new Admin();
-        this.person = new Person();
+        this.person = new Person();   
+        
+        // Set up CardLayout for processContainer
+        CardLayout cardLayout = new CardLayout();
+        processContainer.setLayout(cardLayout);
     }
-
+    
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -117,7 +122,6 @@ public class MainJFrame extends javax.swing.JFrame {
        processContainer.add("AddPersonJPanel", panel);
        CardLayout layout = (CardLayout) processContainer.getLayout();
        layout.next(processContainer);
-       
     }//GEN-LAST:event_btnAdminActionPerformed
 
     private void btnRegularUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegularUserActionPerformed

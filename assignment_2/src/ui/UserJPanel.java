@@ -22,10 +22,10 @@ public class UserJPanel extends javax.swing.JPanel {
     /**
      * Creates new form User1JPanel
      */
-    UserJPanel(JPanel processContainer, Admin admin) {
+    UserJPanel(JPanel processContainer, Person person) {
         initComponents();
         this.processContainer = processContainer;     
-        this.admin = admin;
+        this.person = person;
     }
     
     

@@ -7,6 +7,7 @@ package ui;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import model.Admin;
+import model.Person;
 
 /**
  *

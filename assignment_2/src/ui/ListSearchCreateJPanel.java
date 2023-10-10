@@ -204,6 +204,7 @@ public class ListSearchCreateJPanel extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) processContainer.getLayout();
             layout.next(processContainer);
         }
+        processContainer.remove(this);
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnCreateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateUserActionPerformed
@@ -219,6 +220,7 @@ public class ListSearchCreateJPanel extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) processContainer.getLayout();
             layout.next(processContainer);        
         }
+        processContainer.remove(this);
     }//GEN-LAST:event_btnCreateUserActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed

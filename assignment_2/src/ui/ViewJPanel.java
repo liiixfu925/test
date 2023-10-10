@@ -69,18 +69,21 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblViewInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblViewInfo.setText("View Information");
 
+        txtUserID.setEditable(false);
         txtUserID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserIDActionPerformed(evt);
             }
         });
 
+        txtPassword.setEditable(false);
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
             }
         });
 
+        txtNUid.setEditable(false);
         txtNUid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNUidActionPerformed(evt);
@@ -90,6 +93,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblNUid.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblNUid.setText("Status :");
 
+        txtName.setEditable(false);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -117,6 +121,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblNUid1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         lblNUid1.setText("NU id :");
 
+        txtStatus.setEditable(false);
         txtStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStatusActionPerformed(evt);

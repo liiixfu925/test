@@ -35,12 +35,9 @@ public class CreateUserJPanel extends javax.swing.JPanel {
         txtPassword.setText(person.getPassword());
         txtName.setText(person.getName());
         txtUserID.setText(person.getUserId());
-        cboxStatus.setSelectedItem(person.getStatus());
-               
+        cboxStatus.setSelectedItem(person.getStatus());         
     }
     
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
